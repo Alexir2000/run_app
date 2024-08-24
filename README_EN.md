@@ -37,10 +37,10 @@ The utility does NOT require converting Python scripts into executable files.
     - The utility can be used to create local applications that connect to remote databases, perform data analysis, generate reports, or import/export data.
 
 6. **Educational Projects**:
-    - Ideally suited for students and educators who need to demonstrate or test Python code without the need to install Python on every computer. This simplifies the process of distributing and using educational materials.
-
+    - Ideal for students and educators who need to demonstrate or test Python code without having to set up the Python environment on each computer. This simplifies the distribution and use of educational materials.
+   
 7. **Portable Applications**:
-    - Create applications that can be run from external media, such as a USB drive. This allows the application to be easily moved between different computers without leaving traces on the systems or requiring Python installation.
+    - Create applications that can be run from external media, such as a USB drive. 
 
 
 ## Why is it Useful?
