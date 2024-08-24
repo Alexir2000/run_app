@@ -1,5 +1,10 @@
 # Run App
 
+[![Русский](https://img.shields.io/badge/language-Русский-blue.svg)](README.md)
+[![English](https://img.shields.io/badge/language-English-red.svg)](README_EN.md)
+
+The English version of this README can be found [here](README_EN.md).
+
 **Run App** — это универсальная утилита, которая делает выполнение Python-скриптов таким же простым, как запуск любого другого приложения на вашем компьютере. С помощью этой программы вы можете превратить свои Python-скрипты в полноценные приложения, которые запускаются одним кликом, без необходимости ручной активации виртуального окружения или установки Python на вашу систему.
 
 ## Почему это полезно?
