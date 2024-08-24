@@ -1,0 +1,37 @@
+Выберите версию питона на странице загрузок
+или перейдите сразу к скачиванию по прямым ссылкам.
+Для стабильной работы желательно устанавливать версию python не ниже 3.10.11
+А так же не устанавливать самую последнюю версию (если иное не рекомендовано дополнительно).
+Например, если доступна к скачиванию линейка версий 3.12.хх,
+то лучше скачивать самую последнюю версию из линейки 3.11.ххх
+
+Тут представлены прямые ссылки для скачивания последних версий 
+линеек python 3.10, 3.11, 3.12 по состоянию на 06 августа 2024г.
+
+Python Releases for Windows:
+https://www.python.org/downloads/windows/
+
+Python 3.12.5 - Aug. 6, 2024
+https://www.python.org/ftp/python/3.12.5/python-3.12.5-amd64.exe
+
+Python 3.11.8 - Feb. 6, 2024
+https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe
+
+Python 3.10.11 - April 5, 2023
+https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe
+
+>>><<<
+
+Python Releases for macOS:
+https://www.python.org/downloads/macos/
+
+Python 3.12.5 - Aug. 6, 2024
+https://www.python.org/ftp/python/3.12.5/python-3.12.5-macos11.pkg
+
+Python 3.11.9 - April 2, 2024
+https://www.python.org/ftp/python/3.11.9/python-3.11.9-macos11.pkg
+
+Python 3.10.11 - April 5, 2023
+https://www.python.org/ftp/python/3.10.11/python-3.10.11-macos11.pkg
+
+
