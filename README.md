@@ -25,11 +25,13 @@
 ### Пример структуры проекта:
 
 your_project/
-│
+
 ├── app/
+
 │   ├── main.py
+
 │   ├── requirements.txt
-│
+
 └── run_app.exe
 
 В этой структуре:
