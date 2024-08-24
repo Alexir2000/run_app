@@ -7,6 +7,42 @@
 
 **Run App** is a versatile utility designed to make running Python scripts as straightforward as launching any other application on your computer. With this program, you can turn your Python scripts into standalone applications that can be executed with a single click, without needing to manually activate a virtual environment or ensure that Python is installed on the system.
 
+The utility does NOT require converting Python scripts into executable files.
+
+No modifications to the Python application's code are needed. You can simply copy the necessary application's code into a separate folder and run it as a full-fledged Windows or MacOS application.
+
+## Application Scope
+
+**Run App** is a utility designed for use on personal computers, enabling users to create and run Python applications without needing to understand the intricacies of Python execution or configure virtual environments on each device. It is not intended for server use or remote deployment, but is ideal for a wide range of tasks performed on local machines.
+
+The utility does NOT require converting Python scripts into executable files.
+
+**Run App** significantly simplifies working with Python applications on personal computers, making them accessible to a broader range of users, regardless of their technical background. The utility allows Python scripts to be quickly and conveniently launched as full-fledged applications, ensuring their stable operation without the need to delve into the complexities of Python or environment setup.
+
+### Use Cases
+
+1. **Workplace Task Automation**:
+    - Create scripts for automated management of documents and spreadsheets hosted on cloud services like Google Drive or OneDrive. These scripts can automatically download, modify, or update files, performing tasks on a schedule or as needed.
+
+2. **Web Scraping**:
+    - Develop a scraper that collects data from various websites, such as monitoring prices, gathering news, or analyzing competitors. This scraper can be run from any computer or even from a USB drive, providing mobility and independence from a specific workstation.
+
+3. **Local Data Management**:
+    - Use the utility to automate backups of important data, manage files and folders on a local disk or cloud, synchronize data between devices, and more.
+
+4. **Specialized Tasks for Professionals**:
+    - Develop utilities for engineers, analysts, designers, and other professionals who need to perform specific tasks with certain data or applications, such as automating data processing, generating reports, converting files into various formats, and more.
+
+5. **Database Management**:
+    - The utility can be used to create local applications that connect to remote databases, perform data analysis, generate reports, or import/export data.
+
+6. **Educational Projects**:
+    - Ideally suited for students and educators who need to demonstrate or test Python code without the need to install Python on every computer. This simplifies the process of distributing and using educational materials.
+
+7. **Portable Applications**:
+    - Create applications that can be run from external media, such as a USB drive. This allows the application to be easily moved between different computers without leaving traces on the systems or requiring Python installation.
+
+
 ## Why is it Useful?
 
 Many developers face the challenge of deploying their Python applications on machines where Python might not be installed, or where the installed version does not match the required one. **Run App** solves this problem by offering a tool that not only creates an executable file for your script but also automatically sets up a virtual environment, installs the necessary dependencies, and ensures that your application runs smoothly without any issues.
