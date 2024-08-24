@@ -72,6 +72,40 @@ For convenience, you can rename `run_app.exe` to the name of your application. F
 
 The program supports running any project that can work within a virtual environment. However, the ability to launch frameworks like Django, Flask, FastAPI, and others that require additional configurations and are not typically run using a `main.py` script will be implemented in future versions of this utility.
 
+## Utility Setup
+
+This section describes how to set up the **Run App** utility and create an executable file (`.exe`) using `PyInstaller`. Follow these steps to prepare and launch your Python project as a standalone application.
+
+### Step 1: Install PyInstaller
+
+First, you need to install `PyInstaller` if it is not already installed. You can do this with the following command:
+
+pip install pyinstaller
+
+
+### Step 2: Create the Executable File (exe)
+
+Use `PyInstaller` to create an executable file for your application. In the command line, navigate to the directory where your `run_app.py` file is located and run the following command:
+
+pyinstaller --onefile run_app.py
+
+
+This command will create an executable file in the `dist` folder, which you can rename and use to run your application.
+
+### Step 3: Configure the Executable File
+
+After creating the executable file, move it to the root folder of your future standalone application. You can rename the file to any name you prefer, such as the name of your application. Create a folder named `app` and copy your Python project into it. The main entry point of your project must be named `main.py`.
+
+Don’t forget to create and copy the `requirements.txt` file into the `app` folder.
+
+Now you can run your project using the `run_app` utility.
+
+### Step 4: Testing
+
+Run the newly created executable file and ensure that the application works correctly. The program will automatically create a virtual environment, install all dependencies, and launch the `main.py` script.
+
+Your Python application is now ready to be used as a standalone application that can be run on any machine without additional configuration.
+
 ### What to Do If Python Is Not Installed
 
 If Python is not installed on your system, the program will provide instructions on how to install it and will also provide links to download suitable versions for Windows and macOS.
