@@ -1,7 +1,9 @@
+# Файл библиотеки для запуска приложения run_app_library.py
+#  версия   1.1.0
+
 import os
 import subprocess
 import sys
-
 
 def check_python_installation():
     try:
@@ -9,7 +11,6 @@ def check_python_installation():
         return True
     except (subprocess.CalledProcessError, FileNotFoundError):
         return False
-
 
 def get_venv_python_home(venv_path):
     config_file = os.path.join(venv_path, 'pyvenv.cfg')
@@ -28,18 +29,16 @@ def get_venv_python_home(venv_path):
     else:
         raise FileNotFoundError(f"Файл {config_file} не найден в виртуальном окружении")
 
-
 def check_python_home_exists(python_home):
     return os.path.exists(python_home)
 
-
-def install_venv(current_directory):
-    venv_path = os.path.join(current_directory, 'app', '.venv')
+def install_venv(current_directory, app_path):
+    venv_path = os.path.join(current_directory, app_path, '.venv')
     try:
         print(f"Создание нового виртуального окружения в {venv_path}...")
         subprocess.call(['python', '-m', 'venv', venv_path], shell=True)
 
-        requirements_path = os.path.join(current_directory, 'app', 'requirements.txt')
+        requirements_path = os.path.join(current_directory, app_path, 'requirements.txt')
         if not os.path.exists(requirements_path):
             raise FileNotFoundError("Файл requirements.txt не найден, невозможно установить зависимости.")
 

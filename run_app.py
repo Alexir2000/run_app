@@ -1,3 +1,6 @@
+# Основной файл run_app.py
+#  версия: 1.1.0
+
 import os
 import subprocess
 import sys
@@ -8,8 +11,15 @@ from run_app_library import (install_venv, check_python_installation,
 # В проекте приложения, перед запуском
 # выполнить команду: pip freeze > requirements.txt
 
+# Задайте значение переменной app_path:
+# "" - если папка с окружением и скрипт находятся в корне;
+# "app" - если папка с окружением и скрипт находятся в подпапке app.
+
+app_path = ""
+# app_path = "app" # закомментируйте эту строку, если папка с окружением и скрипт находятся в корне
+#  и раскомментируйте строку выше, если папка с окружением и скрипт находятся в подпапке app
+
 # Установка пути к текущей папке
-# current_directory = r"F:\My_Program\Видеоконвертер_app_py"
 current_directory = ""
 
 def is_venv_active():
@@ -17,10 +27,14 @@ def is_venv_active():
         return True
     return False
 
+def get_full_path(relative_path):
+    """Формирует полный путь в зависимости от значения app_path"""
+    return os.path.join(current_directory, app_path, relative_path)
+
 def get_venv_path():
     possible_paths = [
-        os.path.join(current_directory, 'app', 'venv'),
-        os.path.join(current_directory, 'app', '.venv')
+        get_full_path('venv'),
+        get_full_path('.venv')
     ]
     for path in possible_paths:
         if os.path.exists(path):
@@ -42,7 +56,7 @@ def main():
     if not venv_path:
         confirm = input("Виртуальное окружение с библиотеками для приложения не найдено. \n Хотите установить новое? (y/n): ")
         if confirm.lower() == 'y':
-            install_venv(current_directory)
+            install_venv(current_directory, app_path)
             input("\n Новое окружение с библиотеками установлено. Нажмите Enter для продолжения работы...\n")
             venv_path = get_venv_path()
         else:
@@ -59,17 +73,11 @@ def main():
                 shutil.rmtree(venv_path)  # Удаление папки виртуального окружения с содержимым
                 input(f"Старое окружение с библиотеками удалено. \n"
                       f"Нажмите Enter для установки нового окружения с библиотеками ...")
-                install_venv(current_directory)
+                install_venv(current_directory, app_path)
                 input("\n Новое окружение с библиотеками установлено. Нажмите Enter для продолжения работы...\n")
             else:
                 input("Установка отменена. Нажмите Enter для завершения работы...")
                 return
-
-    # 3. Проверка наличия requirements.txt
-    # requirements_path = os.path.join(current_directory, 'app', 'requirements.txt')
-    # if not os.path.exists(requirements_path):
-    #     input("Файл requirements.txt не найден. Нажмите Enter для завершения работы...")
-    #     return
 
     # 4. Проверка активации виртуального окружения
     if is_venv_active():
@@ -80,7 +88,7 @@ def main():
         return
 
     # 5. Активация виртуального окружения и запуск приложения
-    subprocess.call([os.path.join(venv_path, 'Scripts', 'python.exe'), os.path.join(current_directory, 'app', 'main.py')])
+    subprocess.call([os.path.join(venv_path, 'Scripts', 'python.exe'), get_full_path('main.py')])
     # input("Нажмите Enter для завершения работы...")
 
 
