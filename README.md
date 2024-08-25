@@ -16,6 +16,9 @@ The English version of this README can be found [here](README_EN.md).
 
 [Подробнее о Run App](about_run_app.md)
 
+[Исполняемый файл утилиты Run App для Windows можно скачать отсюда](https://disk.yandex.ru/d/PbwuS2Vo3z7qKw)
+
+
 ### Run App: Новые горизонты для разработки прикладных приложений на Python
 
 Представьте себе мир, где разработка прикладных программ для персональных компьютеров на Python не ограничена 
