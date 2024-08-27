@@ -1,5 +1,5 @@
 # Файл библиотеки для запуска приложения run_app_library.py
-#  версия   1.2.0
+#  версия   1.1.0
 
 import os
 import subprocess
